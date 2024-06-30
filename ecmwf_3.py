@@ -15,11 +15,11 @@ import cdsapi
 from concurrent.futures import ThreadPoolExecutor
 import shutil
 
-# Configuration (replace with your paths and settings)
+# Configuration (replace with paths and settings)
 config = {
-    'dir_temp': 'D:/KAUST/Global/temp',
-    'dir_raw': 'D:/KAUST/Global/raw',
-    'dir_converted': 'D:/KAUST/Global/converted',
+    'dir_temp': 'D:/KAUST/Global/temp', #Location need to change
+    'dir_raw': 'D:/KAUST/Global/raw', #Location need to change
+    'dir_converted': 'D:/KAUST/Global/converted', #Location need to change
 }
 
 # Ensure directories exist
@@ -41,9 +41,9 @@ variables = {
     'temperature': '2m_temperature'
 }
 
-# Define the time range for hindcast
-start_date = datetime(2023, 1, 1)  # Define your start date
-end_date = datetime(2023, 12, 31)  # Define your end date
+# Define the time range
+start_date = datetime(2023, 1, 1)  # Define start date
+end_date = datetime(2023, 1, 31)  # Define end date
 dates = pd.date_range(start_date, end_date, freq='D')
 
 # Initialize CDS API client
